@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f0eb;
+    color: #292929;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #777;
+    font-size: 17px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    color: #777;
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.hint-box {
+    background: #f5f2ed;
+    border-radius: 14px;
+    padding: 25px;
+
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hint-box h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.hint-box p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.answer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-section label {
+    font-weight: bold;
+}
+
+.answer-section input {
+    width: 100%;
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.answer-section input:focus {
+    border-color: #555;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+
+    padding: 14px;
+
+    background: #292929;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+
+    color: #888;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .game-container {
+        padding: 15px;
+    }
+
+    .game-card {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+.game-info select {
+    margin-left: 6px;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.language-note {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    margin: -10px 0 20px;
+}
+
+.relation {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #e4ded4;
+    color: #555;
+    font-size: 13px;
+}
+
+.previous-hints {
+    color: #777;
+    font-size: 15px;
+    margin: -10px 0 20px 20px;
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: default;
+}
+
+button.secondary {
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+    color: #292929;
+    border: 2px solid #292929;
+}
+
+button.secondary:hover {
+    background: #f3f0eb;
+}

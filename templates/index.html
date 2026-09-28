@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WordNet Guess</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header>
+            <h1>WordNet Guess</h1>
+            <p>¡Bienvenido al juego de adivinanza de WordNet!</p>
+            <p>Intenta adivinar la palabra correcta basada en las pistas proporcionadas.</p>
+        </header>
+
+        <section class="game-card">
+
+            <div class="game-info">
+                <label>
+                    Idioma
+                    <select id="language">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </label>
+                <span id="score">Puntaje: 0 (0 partidas)</span>
+                <span id="attempts">Pista 1 de 5</span>
+            </div>
+
+            <p id="language-note" class="language-note">
+                Las pistas se muestran en español y la respuesta se escribe en español.
+            </p>
+
+            <div class="hint-box">
+                <h2>Pista</h2>
+
+                <p id="hint">
+                    Aquí aparecerá la primera pista...
+                </p>
+
+                <span id="relation" class="relation"></span>
+            </div>
+
+            <ol id="previous-hints" class="previous-hints"></ol>
+
+            <div class="answer-section">
+
+                <label for="answer">
+                    ¿Cuál crees que es la respuesta?
+                </label>
+
+                <input
+                    type="text"
+                    id="answer"
+                    placeholder="Escribe tu respuesta..."
+                    autocomplete="off"
+                >
+
+                <button id="guess-button">
+                    Adivinar
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+            <button id="new-game-button" class="secondary">
+                Nueva partida
+            </button>
+
+        </section>
+
+        <footer>
+            <p>Procesamiento de Lenguaje Natural • WordNet</p>
+        </footer>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
